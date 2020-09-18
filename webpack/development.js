@@ -22,6 +22,7 @@ const backendEndpoints = [
   '/.well-known/webfinger',
   '/static',
   '/emoji',
+  '/main/ostatus',
 ];
 
 const makeProxyConfig = () => {
