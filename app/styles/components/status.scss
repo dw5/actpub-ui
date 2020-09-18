@@ -26,10 +26,6 @@
     list-style: decimal outside none;
   }
 
-  li p {
-    display: inline-block;
-  }
-
   blockquote {
     padding: 5px 0 5px 15px;
     border-left: 3px solid hsla(var(--primary-text-color_hsl), 0.4);
@@ -638,4 +634,16 @@ a.status-card.compact:hover {
   object-fit: cover;
   background-size: cover;
   background-position: center center;
+}
+
+.status__favicon {
+  width: 16px;
+  height: 16px;
+  float: right;
+  margin-right: 4px;
+
+  img {
+    width: 100%;
+    max-height: 100%;
+  }
 }
