@@ -85,7 +85,13 @@ class ActionButton extends ImmutablePureComponent {
     let actionBtn = null;
 
     if (!me) {
-      actionBtn = <form method='POST' action='/main/ostatus'><input type='hidden' name='nickname' value={account.get('username')} /><input type='hidden' name='profile' value='' /><Button className='logo-button' text={intl.formatMessage(messages.remote_follow)} click='submit' /></form>;
+      return (
+        <form method='POST' action='/main/ostatus'>
+          <input type='hidden' name='nickname' value={account.get('username')} />
+          <input type='hidden' name='profile' value='' />
+          <Button className='logo-button' text={intl.formatMessage(messages.remote_follow)} click='submit' />
+        </form>
+      );
     }
 
     if (me !== account.get('id')) {
